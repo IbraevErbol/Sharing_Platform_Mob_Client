@@ -9,7 +9,7 @@ export const RegisterScreen = ({ navigation }) => {
 
     const handleRegister = async() => {
         try {
-            const response = await axios.post('http://192.168.0.139:2000/register', {
+            const response = await axios.post('https://sharing-platform-mob-server.onrender.com/register', {
                 username, email, password,
             });
 

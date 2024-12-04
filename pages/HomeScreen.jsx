@@ -46,7 +46,7 @@ export const HomeScreen = ({navigation}) => {
 
   const fetchPosts = async() => {
     try {
-      const response = await axios.get('http://192.168.0.139:2000/posts');
+      const response = await axios.get('https://sharing-platform-mob-server.onrender.com/posts');
       setPosts(response.data);
     } catch (error) {
       Alert.alert('Ошибка', 'Не удалось загрузить посты')

@@ -99,7 +99,7 @@ export const ProfileScreen = ({ route }) => {
     try {
       const token = await AsyncStorage.getItem("token");
       if (token) {
-        const response = await axios.get("http://192.168.0.139:2000/profile", {
+        const response = await axios.get("https://sharing-platform-mob-server.onrender.com/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserInfo(response.data);
@@ -117,7 +117,7 @@ export const ProfileScreen = ({ route }) => {
       const token = await AsyncStorage.getItem("token");
       if (token) {
         const response = await axios.get(
-          "http://192.168.0.139:2000/user/posts",
+          "https://sharing-platform-mob-server.onrender.com/user/posts",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -152,7 +152,7 @@ export const ProfileScreen = ({ route }) => {
     try {
       const token = await AsyncStorage.getItem("token");
 
-      await axios.delete(`http://192.168.0.139:2000/posts/${postId}`, {
+      await axios.delete(`https://sharing-platform-mob-server.onrender.com/posts/${postId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(posts.filter((post) => post._id !== postId));

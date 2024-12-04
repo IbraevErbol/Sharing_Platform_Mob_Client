@@ -54,7 +54,7 @@ export const CreatePostScreen = () => {
         }
 
         try {
-            const response = await axios.post('http://192.168.0.139:2000/posts', formData, {
+            const response = await axios.post('https://sharing-platform-mob-server.onrender.com/posts', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     Authorization: `Bearer ${token}`,

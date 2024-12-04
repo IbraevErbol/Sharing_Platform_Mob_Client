@@ -87,7 +87,7 @@ export const EditProfileScreen = ({ route }) => {
     const handleSave = async () => {
         try {
             const token = await AsyncStorage.getItem('token');
-            await axios.put('http://192.168.0.139:2000/profile/update',
+            await axios.put('https://sharing-platform-mob-server.onrender.com/profile/update',
                 { name, phoneNumber, profileImageUrl, gender, age },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

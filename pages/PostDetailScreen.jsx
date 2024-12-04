@@ -31,7 +31,7 @@ export const PostDetailScreen = ({route}) => {
     useEffect(()=> {
         const fetchPost = async() => {
             try {
-                const response = await axios.get(`http://192.168.0.139:2000/posts/${postId}`);
+                const response = await axios.get(`https://sharing-platform-mob-server.onrender.com/posts/${postId}`);
                 setPost(response.data)
                 
             } catch (error) {

@@ -11,7 +11,7 @@ export const LoginScreen = ({ navigation }) => {
     try {
       const trimmedEmail = email.trim();
 
-      const response = await axios.post('http://192.168.0.139:2000/login', { email: trimmedEmail, password });
+      const response = await axios.post('https://sharing-platform-mob-server.onrender.com/login', { email: trimmedEmail, password });
       const { token, user } = response.data;
 
       await AsyncStorage.setItem('token', token);
